@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    background-color: pink;
+}
+
+.imagen-container {
+    text-align: center;
+    padding-top: 60px;
+}
+
+img{
+    width: 30%;
+}

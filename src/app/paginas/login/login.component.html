@@ -1,0 +1,19 @@
+<div class="body">
+    <div class="login">
+        <img src="http://localhost:8080/imagenes/usuario.jpg" width="50%">
+        <h1>Login</h1>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input matInput [(ngModel)]="nombre">
+        </mat-form-field>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" [(ngModel)]="clave">
+        </mat-form-field>
+        <br>
+        <button class="ancho button" mat-raised-button color="primary" (click)="onLogin()"
+            >Acceder</button>
+        <div *ngIf="error | async" class="error">{{ error | async }}</div>
+
+    </div>
+</div>

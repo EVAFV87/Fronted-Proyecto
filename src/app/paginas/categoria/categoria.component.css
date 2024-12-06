@@ -1,0 +1,11 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-image: url('http://localhost:8080/imagenes/fondo.jpg');
+}
+
+app-item-ropa {
+    width: 15em;
+}

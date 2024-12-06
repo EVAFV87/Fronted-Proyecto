@@ -1,0 +1,14 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+
+        <mat-card-title>{{ropa.nombre}}</mat-card-title>
+        <mat-card-subtitle>{{ropa.proveedor}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="ropa.imagen" alt="Foto de la ropa">
+
+    <mat-card-actions>
+        <button mat-button [routerLink]="['/ropa', ropa.id]">VER</button>
+    </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" style="display: flex; justify-content: space-evenly">
+
+    <button color="accent" *ngFor="let categoria of categorias | async" [routerLink]="['categoria', categoria.id]"
+        mat-button>{{categoria.nombre}}</button>
+
+    <button *ngIf="(rol | async) === 'ANONIMO'" color="accent" [routerLink]="['login']" mat-button>
+        <mat-icon aria-hidden="false" aria-label="Loguearme" fontIcon="login"></mat-icon>
+    </button>
+
+    <button *ngIf="(rol | async) !== 'ANONIMO'"  color="accent" (click)="logout()" mat-button>
+        <mat-icon aria-hidden="false" aria-label="Logout" fontIcon="logout"></mat-icon>
+        {{usuario | async}}
+    </button>
+
+    <button *ngIf="!raiz" routerLink="/" mat-icon-button
+        aria-label="Volver atras">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+
+</mat-toolbar>

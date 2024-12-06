@@ -1,0 +1,13 @@
+mat-card,
+table {
+    margin: 20px;
+}
+
+table {
+    min-width: calc(100% - 40px) !important;
+}
+
+mat-card-content {
+    display: flex;
+    justify-content: space-between;
+}
